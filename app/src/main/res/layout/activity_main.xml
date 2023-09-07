@@ -4,15 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D7d6D7"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imgMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="32dp"
+        android:src="@tools:sample/avatars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/girl" />
+
+    <ImageView
+        android:id="@+id/imgBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@tools:sample/avatars"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/bottom_white" />
+
+    <TextView
+        android:id="@+id/txtvVwWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome \nto this App"
+        android:layout_marginStart="32dp"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgMain" />
+
+    <TextView
+        android:id="@+id/txtVwAnder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple login and registry form \nusing farebase"
+        android:textSize="20sp"
+        android:textColor="#8b8b8b"
+        app:layout_constraintStart_toStartOf="@id/txtvVwWelcome"
+        app:layout_constraintTop_toBottomOf="@id/txtvVwWelcome" />
+
+    <TextView
+        android:id="@+id/btnGetStarted"
+        android:layout_width="175dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="Get Started"
+        android:background="@drawable/background_button_intro"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
